@@ -1,0 +1,66 @@
+.link { 
+    color: #fff; 
+    text-decoration: none; 
+    padding: 10px; 
+    font-size: 1.4rem; 
+  } 
+  .link:hover { 
+    background-color: #fff; 
+    color: #282c34; 
+    border-radius: 5px; 
+  }
+
+  
+  .nav {
+    background: grey;
+    
+    padding-left: 1000px;
+    padding-right: 1000px;
+    
+  }
+  
+  .nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    
+    
+  }
+  
+  .searchHeader {
+    padding-top: 40px;
+    
+  }
+  
+  .searchBox {
+    margin-bottom: 10px;
+    display: flex;
+    padding: 5%;
+    gap: 10px;
+  }
+  
+  .inputField {
+    width: 100%;
+    padding: 10px;
+    
+  }
+  
+  .searchButton {
+    flex-shrink: 0;
+   
+  }
+  
+  .sortBox {
+    margin-bottom: 10px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding-left: 10%;
+  }
+  
+  .sortByDropdown {
+    min-width: 150px;
+  }
+  .he{
+    color: 'whitesmoke' 
+  }

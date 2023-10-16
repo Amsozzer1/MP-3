@@ -1,0 +1,43 @@
+
+.img:hover{
+    transform: scale(1.3);
+    z-index: 200;
+    box-shadow: 0 0 15px #000;
+    transition: all 0.3s ease-in-out;
+}
+.container {
+    width: 90%;
+    margin: auto;
+  }
+  
+  .genre-select {
+    margin-bottom: 20px;
+  }
+  
+  .sort-button {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .image-list {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 50px;
+  }
+  
+  .img {
+    margin: 0;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+  }
+  
+  .img img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .movie-title {
+    color: whitesmoke;
+  }
+  

@@ -1,24 +1,55 @@
 import React from 'react';
-import logo from './logo.svg';
+import Search from './Search';
+import MovieComponent from './Movies_main';
+import DetailView from './movie_detail';
 import './App.css';
 
-function App() {
+import {
+  Link,
+  RouterProvider,
+  createBrowserRouter,
+} from "react-router-dom";
+
+export const Layout: React.FC = () => {
+  return (
+    <div>
+      <nav className="nav">
+        <ul className="nav">
+          <li>
+            <Link to="/" className="link">Popular Movies</Link>
+          </li>
+          <li>
+            <Link to="/search" className="link">Search</Link>
+          </li>
+        </ul>
+      </nav>
+      <div className="layout">
+        <MovieComponent />
+      </div>
+    </div>
+  );
+};
+
+const router = createBrowserRouter([
+  {
+    id: "root",
+    path: "/",
+    Component: Layout,
+  },
+  {
+    path: "/search",
+    Component: Search,
+  },
+  {
+    path: "/detail/:id",
+    Component: DetailView,
+  }
+]);
+
+const App: React.FC = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <RouterProvider router={router} fallbackElement={<p>Initial Load...</p>} />
     </div>
   );
 }
